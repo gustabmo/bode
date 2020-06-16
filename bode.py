@@ -1,3 +1,5 @@
+# bode.py - a game by guexel@gmail.com
+
 import math
 import random
 import pygame
