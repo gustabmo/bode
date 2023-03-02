@@ -5,11 +5,11 @@ import random
 import pygame
 
 
-width=800
-height=600
+width=1100
+height=800
 numPlatforms=40
 sizeFrame=5
-slowMo=0.004
+slowMo=0.015
 
 colorBG=(0,0,0)
 colorPlat1=(40,200,100)
@@ -39,8 +39,9 @@ def dessineNouvellePlateforme(win,cestLeBut):
 
 
 def dessinePlatformes(win):
-    for n in range(numPlatforms):
-        dessineNouvellePlateforme ( win, n==(numPlatforms-1) ) # le tout dernier sera le But
+    for n in range(numPlatforms-1):
+        dessineNouvellePlateforme ( win, False ) 
+    dessineNouvellePlateforme ( win, True ) # le tout dernier sera le But
 
 
 def dessineFrame(win):
